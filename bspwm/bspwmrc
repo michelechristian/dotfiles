@@ -25,7 +25,7 @@ polybar example &
 # xfce4-power-manager &
 
 # Start Chrome on startup
-sleep 3; pgrep -x chrome > /dev/null || google-chrome &
+# sleep 3; pgrep -x chrome > /dev/null || google-chrome &
 
 
 bspc monitor -d I II III IV V VI VII VIII IX X
