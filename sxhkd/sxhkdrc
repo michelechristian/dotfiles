@@ -11,22 +11,21 @@ super + d
 	dmenu_run
 
 super + @space
-	rofi -show drun -modi drun -show-icons \ 
-		-columns 3 -line-padding 4 -padding 50 \
-		-hide-scrollbar -terminal gnome-terminal
+	rofi -show drun -modi drun -show-icons -columns 3
+
 
 #super + Tab
 #	rofi -show window -columns 2 -line-padding 4 \
 #		-hide-scrollbar
 	
 super + slash
-	rofi -show window -columns 2 -line-padding 4 \
-		-hide-scrollbar	
-		
-		
+	rofi -show window -show-icons
+
+
+
 # Lock Screen
 super + l
-	env XSECURELOCK_SAVER=saver_xscreensaver xsecurelock		
+	env XSECURELOCK_SAVER=saver_xscreensaver xsecurelock
 
 
 ##################################

@@ -40,7 +40,16 @@ bspc config pointer_follows_focus true
 bspc config focus_follows_pointer true
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
+
+
 bspc rule -a Google-chrome desktop='^1'
+
+# Google Hangouts
+bspc rule -a *:crx_nckgahadagoaajjgafhacjanaoiihapd desktop='^2'
+
+# Google Chats
+bspc rule -a *:crx_mdpkiolbdkhdjpekfbkbmhigcaggjagi desktop='^2'
+
 # bspc rule -a Gnome-terminal desktop='^3'
 bspc rule -a Gedit desktop='^4'
 bspc rule -a Firefox desktop='^5'
