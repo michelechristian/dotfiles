@@ -19,27 +19,29 @@ nm-applet &
 
 pgrep -x clipit > /dev/null || clipit &
 
+# pgrep -x redshift-gtk > /dev/null || redshift-gtk &
+
 # xsetroot -cursor_name left_ptr &
 
 xinput set-prop 13 "libinput Tapping Enabled" "1" &
 
 xinput set-prop 13 "libinput Natural Scrolling Enabled" "1" &
 
-# ~/.config/polybar/launch.sh --material &
+~/.config/polybar/launch.sh &
 
-polybar example &
+# polybar example &
 
-pgrep -x volumeicon > /dev/null || volumeicon &
+# pgrep -x volumeicon > /dev/null || volumeicon &
 
-pgrep -x xfce4-power-manager > /dev/null || xfce4-power-manager &
-
-# /usr/lib/xfce4/notifyd/xfce4-notifyd &
+# pgrep -x xfce4-power-manager > /dev/null || xfce4-power-manager &
 
 # Start Chrome on startup
 # sleep 3; pgrep -x chrome > /dev/null || google-chrome &
 
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+# bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor -d 一 二 三 四 五 六 七 八 九 十
+
 
 bspc config border_width         2
 bspc config window_gap           5
