@@ -11,15 +11,10 @@ super + d
 	dmenu_run
 
 super + @space
-	rofi -show drun -modi drun -show-icons -columns 3
-
-
-alt + Tab
-	rofi -show window -show-icons
+	rofi -show drun -modi drun -show-icons -columns 2
 
 super + slash
 	rofi -show window -show-icons
-
 
 # Lock Screen
 ctrl + alt + l
@@ -30,8 +25,8 @@ ctrl + alt + l
 # Print Screen
 ##################################
 
-Print
-	xfce4-screenshooter; notify-send "Screen captured"
+#Print
+#	xfce4-screenshooter; notify-send "Screen captured"
 
 
 ##################################
@@ -40,27 +35,27 @@ Print
 
 
 # Raises volume
-#XF86AudioRaiseVolume
-#    amixer -D pulse set Master 5%+
+XF86AudioRaiseVolume
+    amixer -D pulse set Master 10%+
 
 # Lowers volume
-#XF86AudioLowerVolume
-#    amixer -D pulse set Master 5%-
+XF86AudioLowerVolume
+    amixer -D pulse set Master 10%-
 
 # Mutes
-#XF86AudioMute
-#amixer set Master toggle
+XF86AudioMute
+    amixer -D pulse set Master toggle
 #    amixer -D pulse set Master 1+ toggle
 
 
 
 # Brightness goes up
-#XF86MonBrightnessUp
-#    brightnessctl set 10%+
+XF86MonBrightnessUp
+    xbacklight -inc 10%
 
 # Brightness goes down
-#XF86MonBrightnessDown
-#    brightnessctl set 10%-
+XF86MonBrightnessDown
+    xbacklight -dec 10%
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -120,7 +115,8 @@ super + {_,shift + }c
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
-	bspc desktop -f {prev,next}.local
+  #bspc desktop -f {prev,next}.local
+	bspc desktop -f {prev,next}.occupied.local
 
 # focus the last node/desktop
 super + {grave,Tab}
